@@ -56,7 +56,7 @@ input[type=range] {
   background-color: transparent;
 }
 
-.outer-circle {
+#timer .outer-circle {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -64,7 +64,7 @@ input[type=range] {
   background: linear-gradient(var(--primary-color-dark) var(--percent-done), #25AA48 var(--percent-done));
 }
 
-.inner-circle {
+#timer .inner-circle {
   width: 90%;
   height: 90%;
   border-radius: 50%;
@@ -74,7 +74,7 @@ input[type=range] {
   vertical-align: middle;
 }
 
-.timer-display {
+#timer .timer-display {
   text-align: center;
   vertical-align: middle;
   line-height: 175px;
