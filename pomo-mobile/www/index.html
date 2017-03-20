@@ -43,30 +43,26 @@
           </ion-header-bar>
           <ion-content class="content">
             <div class="row">
-              <p class="range-label">Break</p>
-            </div>
-            <div class="row">
-              <div class="col col-60">
+              <div class="col col-75">
                 <div class="item range" ng-init="breakTime = 300">
+                  <label class="range-label">Break</label>
                   <input type="range" name="break" min="60" max="1500" step="60" ng-model="breakTime">
                 </div>
               </div>
-              <div class="col col-40">
+              <div class="col col-25">
                 <div class="range-display">
                   <p class="time-ctrl">{{breakTime | time}}</p>
                 </div>
               </div>
             </div>
             <div class="row">
-              <p class="range-label">Work</p>
-            </div>
-            <div class="row">
-              <div class="col col-60">
+              <div class="col col-75">
                 <div class="item range" ng-init="workTime = 1500">
+                  <label class="range-label">Work</label>
                   <input type="range" name="work" min="300" max="1500" step="60" ng-model="workTime">
                 </div>
               </div>
-              <div class="col col-40">
+              <div class="col col-25">
                 <div class="range-display">
                   <p class="time-ctrl">{{workTime | time}}</p>
                 </div>
