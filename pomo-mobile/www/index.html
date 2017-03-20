@@ -37,6 +37,8 @@
     <!--Components-->
     <script src="js/components/break-slider/break-slider.component.js"></script>
     <script src="js/components/break-slider/break-slider.controller.js"></script>
+    <script src="js/components/work-slider/work-slider.component.js"></script>
+    <script src="js/components/work-slider/work-slider.controller.js"></script>
     <script src="js/components/timer-display/timer-display.component.js"></script>
     <script src="js/components/timer-display/timer-display.controller.js"></script>
   </head>
@@ -50,19 +52,7 @@
           <ion-content class="content">
             <h3 class="section-label">Session</h3>
             <break-slider></break-slider>
-            <div class="row">
-              <div class="col col-75">
-                <div class="item range" ng-init="workTime = 1500">
-                  <label class="range-label">Work</label>
-                  <input type="range" name="work" min="300" max="1500" step="60" ng-model="workTime">
-                </div>
-              </div>
-              <div class="col col-25">
-                <div class="range-display">
-                  <p class="time-ctrl">{{workTime | time}}</p>
-                </div>
-              </div>
-            </div>
+            <work-slider></work-slider>
             <timer-display></timer-display>
             <button class="button button-outline button-full button-light">Start</button>
           </ion-content>

@@ -1,0 +1,13 @@
+<div class="row" id="workSlider">
+  <div class="col col-75">
+    <div class="item range">
+      <label class="range-label">Work</label>
+      <input type="range" name="break" min="60" max="1500" step="60" ng-model="$ctrl.workTime">
+    </div>
+  </div>
+  <div class="col col-25">
+    <div class="range-display">
+      <p class="time-ctrl">{{$ctrl.workTime | time}}</p>
+    </div>
+  </div>
+</div>
