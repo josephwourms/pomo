@@ -9,11 +9,20 @@
   --primary-color: #C42615;
   --primary-color-dark: #770C01;
   --secondary-color: #B1CE2B;
+  --percent-done: 33%;
 }
 
 .content {
   background-color: var(--primary-color);
   padding: 1em;
+}
+
+.section-label {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 2px black;
+  border-bottom: 1px solid white;
+  padding-bottom: 4px;
 }
 
 .range {
@@ -51,4 +60,29 @@
 
 input[type=range] {
   background-color: transparent;
+}
+
+.outer-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 1em auto;
+  background: linear-gradient(var(--primary-color-dark) var(--percent-done), #25AA48 var(--percent-done));
+}
+
+.inner-circle {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 5%;
+  align-content: center;
+  vertical-align: middle;
+}
+
+.timer-display {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 225px;
+  color: white;
 }
