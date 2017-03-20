@@ -19,9 +19,8 @@
 
 .section-label {
   text-align: center;
-  color: white;
-  text-shadow: 0 0 2px black;
-  border-bottom: 1px solid white;
+  color: #eee;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 4px;
 }
 
@@ -66,7 +65,7 @@ input[type=range] {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin: 1em auto;
+  margin: 0.5em auto;
   background: linear-gradient(var(--primary-color-dark) var(--percent-done), #25AA48 var(--percent-done));
 }
 
