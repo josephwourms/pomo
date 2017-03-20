@@ -63,8 +63,8 @@ input[type=range] {
 }
 
 .outer-circle {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin: 1em auto;
   background: linear-gradient(var(--primary-color-dark) var(--percent-done), #25AA48 var(--percent-done));
@@ -83,6 +83,6 @@ input[type=range] {
 .timer-display {
   text-align: center;
   vertical-align: middle;
-  line-height: 225px;
+  line-height: 175px;
   color: white;
 }
