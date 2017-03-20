@@ -11,13 +11,6 @@
   --secondary-color: #B1CE2B;
 }
 
-
-
-hr {
-  border-color: #F55;
-  margin: 2em 0;
-}
-
 .content {
   background-color: var(--primary-color);
   padding: 1em;
