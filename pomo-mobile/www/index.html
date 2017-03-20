@@ -32,8 +32,9 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/filters/time.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="pomoApp">
 
     <ion-side-menus>
         <ion-side-menu-content>
@@ -43,15 +44,15 @@
           <ion-content>
             <div class="row">
               <div class="col">
-                <p>Break: 5:00</p>
-                <div class="item range">
-                  <input type="range" name="break">
+                <p>Break: {{breakTime | time}}</p>
+                <div class="item range" ng-init="breakTime = 300">
+                  <input type="range" name="break" min="60" max="1500" step="60" ng-model="breakTime">
                 </div>
               </div>
               <div class="col">
-                <p>Work: 20:00</p>
-                <div class="item range">
-                  <input type="range" name="work">
+                <p>Work: {{workTime | time}}</p>
+                <div class="item range" ng-init="workTime = 1500">
+                  <input type="range" name="work" min="300" max="1500" step="60" ng-model="workTime">
                 </div>
               </div>
             </div>
