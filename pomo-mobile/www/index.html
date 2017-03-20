@@ -35,6 +35,8 @@
     <script src="js/filters/time.js"></script>
 
     <!--Components-->
+    <script src="js/components/break-slider/break-slider.component.js"></script>
+    <script src="js/components/break-slider/break-slider.controller.js"></script>
     <script src="js/components/timer-display/timer-display.component.js"></script>
     <script src="js/components/timer-display/timer-display.controller.js"></script>
   </head>
@@ -47,19 +49,7 @@
           </ion-header-bar>
           <ion-content class="content">
             <h3 class="section-label">Session</h3>
-            <div class="row">
-              <div class="col col-75">
-                <div class="item range" ng-init="breakTime = 300">
-                  <label class="range-label">Break</label>
-                  <input type="range" name="break" min="60" max="1500" step="60" ng-model="breakTime">
-                </div>
-              </div>
-              <div class="col col-25">
-                <div class="range-display">
-                  <p class="time-ctrl">{{breakTime | time}}</p>
-                </div>
-              </div>
-            </div>
+            <break-slider></break-slider>
             <div class="row">
               <div class="col col-75">
                 <div class="item range" ng-init="workTime = 1500">
