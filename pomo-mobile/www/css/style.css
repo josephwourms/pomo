@@ -1,20 +1,29 @@
 /* Empty. Add your own CSS if you like */
 
+@font-face {
+  font-family: Poiret;
+  src: url(./fonts/PoiretOne-Regular.ttf);
+}
+
 :root {
   --primary-color: #C42615;
   --primary-color-dark: #770C01;
   --secondary-color: #B1CE2B;
 }
 
+body {
+  font-family: Poiret;
+}
 .content {
   background-color: var(--primary-color);
 }
 
 .time-ctrl {
   text-align: center;
-  font-weight: bold;
-  color: #FFAAAA;
-  text-shadow: 0 0 3px var(--primary-color-dark);
+  font-size: 24px;
+  font-weight: 800;
+  padding: 15px;
+  color: #500;
 }
 
 .range {
