@@ -1,6 +1,13 @@
 angular.module('pomoApp') 
-  .controller('breakSliderCtrl', [function() {
+  .controller('breakSliderCtrl', ['timerService', function(timerService) {
     var ctrl = this;
 
-    ctrl.breakTime = 300;
+    ctrl.breakTime = timerService.getBreakTime();
+
+    ctrl.onChange = function(value) {
+      if (timerService.isStarted) {
+        return;
+      }
+      timerService.updateBreakTime(value);
+    };
   }])

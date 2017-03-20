@@ -2,7 +2,7 @@
   <div class="col col-75">
     <div class="item range">
       <label class="range-label">Work</label>
-      <input type="range" name="break" min="60" max="1500" step="60" ng-model="$ctrl.workTime">
+      <input type="range" name="break" min="5" max="1500" step="60" ng-model="$ctrl.workTime" ng-change="$ctrl.onChange($ctrl.workTime)">
     </div>
   </div>
   <div class="col col-25">

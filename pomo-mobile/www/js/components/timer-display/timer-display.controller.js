@@ -1,6 +1,11 @@
 angular.module('pomoApp')
-  .controller('timerCtrl', [function() {
-    var timer = this;
+  .controller('timerCtrl', ['timerService', function(timerService) {
+    var ctrl = this;
 
-    timer.time = 1500;
+
+    ctrl.time = timerService.getWorkTime();
+
+    ctrl.update = timerService.onChange(function(value) {
+      ctrl.time = value;
+    })
   }]);

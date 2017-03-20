@@ -34,6 +34,8 @@
     <script src="js/app.js"></script>
     <script src="js/filters/time.js"></script>
 
+    <script src="js/start-button.controller.js"></script>
+
     <!--Components-->
     <script src="js/components/break-slider/break-slider.component.js"></script>
     <script src="js/components/break-slider/break-slider.controller.js"></script>
@@ -41,6 +43,9 @@
     <script src="js/components/work-slider/work-slider.controller.js"></script>
     <script src="js/components/timer-display/timer-display.component.js"></script>
     <script src="js/components/timer-display/timer-display.controller.js"></script>
+
+    <!--Services-->
+    <script src="js/services/timer.service.js"></script>
   </head>
   <body ng-app="pomoApp">
 
@@ -54,7 +59,7 @@
             <break-slider></break-slider>
             <work-slider></work-slider>
             <timer-display></timer-display>
-            <button class="button button-outline button-full button-light">Start</button>
+            <button class="button button-outline button-full button-light" ng-controller="startButtonCtrl as btn" ng-click="btn.handleClick()">{{btn.text}}</button>
           </ion-content>
         </ion-side-menu-content>
     </ion-side-menus>
