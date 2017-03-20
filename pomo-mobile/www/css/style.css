@@ -1,1 +1,27 @@
 /* Empty. Add your own CSS if you like */
+
+:root {
+  --primary-color: #C42615;
+  --primary-color-dark: #770C01;
+  --secondary-color: #B1CE2B;
+}
+
+.content {
+  background-color: var(--primary-color);
+}
+
+.time-ctrl {
+  text-align: center;
+  font-weight: bold;
+  color: #FFAAAA;
+  text-shadow: 0 0 3px var(--primary-color-dark);
+}
+
+.range {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+input[type=range] {
+  background-color: transparent;
+}

@@ -41,16 +41,16 @@
           <ion-header-bar class="bar bar-header bar-dark">
             <h1 class="title">Pomo</h1>
           </ion-header-bar>
-          <ion-content>
+          <ion-content class="content">
             <div class="row">
               <div class="col">
-                <p>Break: {{breakTime | time}}</p>
+                <p class="time-ctrl">Break: {{breakTime | time}}</p>
                 <div class="item range" ng-init="breakTime = 300">
                   <input type="range" name="break" min="60" max="1500" step="60" ng-model="breakTime">
                 </div>
               </div>
               <div class="col">
-                <p>Work: {{workTime | time}}</p>
+                <p class="time-ctrl">Work: {{workTime | time}}</p>
                 <div class="item range" ng-init="workTime = 1500">
                   <input type="range" name="work" min="300" max="1500" step="60" ng-model="workTime">
                 </div>
