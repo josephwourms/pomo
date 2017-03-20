@@ -16,6 +16,7 @@ body {
 }
 .content {
   background-color: var(--primary-color);
+  padding: 1em;
 }
 
 .time-ctrl {
