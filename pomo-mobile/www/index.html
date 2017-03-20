@@ -56,9 +56,42 @@
           </ion-header-bar>
           <ion-content class="content">
             <h3 class="section-label">Session</h3>
-            <break-slider></break-slider>
-            <work-slider></work-slider>
-            <timer-display></timer-display>
+            <!--<break-slider></break-slider>-->
+            <div class="row" id="breakSlider" ng-controller="breakSliderCtrl as breakSlider">
+              <div class="col col-75">
+                <div class="item range">
+                  <label class="range-label">Break</label>
+                  <input type="range" name="break" min="60" max="1500" step="60" ng-model="breakSlider.breakTime">
+                </div>
+              </div>
+              <div class="col col-25">
+                <div class="range-display">
+                  <p class="time-ctrl">{{breakSlider.breakTime | time}}</p>
+                </div>
+              </div>
+            </div>
+            <!--<work-slider></work-slider>-->
+            <div class="row" id="workSlider" ng-controller="workSliderCtrl as workSlider">
+              <div class="col col-75">
+                <div class="item range">
+                  <label class="range-label">Work</label>
+                  <input type="range" name="break" min="5" max="1500" step="60" ng-model="workSlider.workTime" ng-change="workSlider.onChange(workSlider.workTime)">
+                </div>
+              </div>
+              <div class="col col-25">
+                <div class="range-display">
+                  <p class="time-ctrl">{{workSlider.workTime | time}}</p>
+                </div>
+              </div>
+            </div>
+            <!--<timer-display></timer-display>-->
+            <div class="row" id="timer" ng-controller="timerDisplayCtrl as timer">
+              <div class="outer-circle">
+                <div class="inner-circle">
+                  <h2 class="timer-display">{{timer.time | time}}</h2>
+                </div>
+              </div>
+            </div>
             <button class="button button-outline button-full button-light" ng-controller="startButtonCtrl as btn" ng-click="btn.handleClick()">{{btn.text}}</button>
           </ion-content>
         </ion-side-menu-content>
