@@ -5,6 +5,7 @@
   --primary-color-dark: #770C01;
   --secondary-color: #B1CE2B;
   --percent-done: 100%;
+  --status-color: #25AA48;
 }
 
 .content {
@@ -61,7 +62,7 @@ input[type=range] {
   height: 200px;
   border-radius: 50%;
   margin: 0.5em auto;
-  background: linear-gradient(var(--primary-color-dark) var(--percent-done), #25AA48 var(--percent-done));
+  background: linear-gradient(var(--primary-color-dark) var(--percent-done), var(--status-color) var(--percent-done));
 }
 
 #timer .inner-circle {

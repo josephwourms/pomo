@@ -34,8 +34,22 @@ angular.module('pomoApp')
         timer.start();
         return;
       }
+      var status = document.querySelector('.outer-circle');
       timer.currentTime = value;
-      console.log(timer.currentTime);
+      if (timer.working && timer.isStarted) {
+        var percentDone = 100 * (timer.currentTime / timer.workTime);
+        var statusColor = "#25AA48";
+      } else if (timer.isStarted) {
+        var percentDone = 100 * (timer.currentTime / timer.breakTime);
+        var statusColor = "#AA4825";
+      } else {
+        var percentDone = 100;
+        var statusColor = "#25AA48";
+      }
+      
+      document.documentElement.style.setProperty('--percent-done', percentDone + "%");
+      document.documentElement.style.setProperty('--status-color', statusColor);
+      
       for (i = 0; i < callbacks.length; i++) {
         callbacks[i](value);
       }
