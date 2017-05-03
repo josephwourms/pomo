@@ -16,6 +16,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     
+    this.notificationSound = new Audio('http://soundbible.com/grab.php?id=1630&type=mp3');
+    
     this.state = {
       working: false,
       started: false,
@@ -99,6 +101,7 @@ class App extends Component {
           status: 'Work Session',
         });
       }
+      this.notificationSound.play();
     }
     this.setState(prevState => ({
       time: prevState.time - 1,
