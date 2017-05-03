@@ -1,0 +1,16 @@
+.time-display.inner {
+    margin-top: 25%;
+}
+
+.time-display.time {
+    font-weight: normal;
+    font-size: 2.5em;
+    line-height: 0em;
+}
+
+.time-display.prompt, 
+.time-display.status {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.60);
+}
